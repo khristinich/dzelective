@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>!!ВАЖНО!! Вход в Личный Кабинет</title>
+  <style>
+    body {
+      background: radial-gradient(circle at top left, #ff0000, #000000);
+      color: yellow;
+      font-family: Comic Sans MS, cursive, sans-serif;
+      margin: 0;
+      padding: 10px;
+      text-align: center;
+      user-select: none;
+    }
+    header {
+      background: linear-gradient(45deg, #00ff00, #0000ff);
+      padding: 20px;
+      box-shadow: 10px 10px 20px #ff00ff;
+      border: 5px dashed yellow;
+      font-size: 3rem;
+      font-weight: 900;
+      animation: blinky 1s infinite alternate;
+    }
+    @keyframes blinky {
+      0% { text-shadow: 0 0 15px yellow; }
+      100% { text-shadow: 0 0 50px white; }
+    }
+    main {
+      background: black;
+      max-width: 500px;
+      margin: 30px auto;
+      padding: 15px;
+      border: 8px double yellow;
+      box-shadow: 0 0 20px red;
+    }
+    .warning {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: red;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      text-align: left;
+      font-size: 1.2rem;
+      margin: 5px 0 5px 5px;
+      color: lime;
+    }
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 90%;
+      padding: 10px;
+      margin: 5px auto 15px auto;
+      display: block;
+      border: 3px solid yellow;
+      border-radius: 0;
+      background: black;
+      color: yellow;
+      font-weight: 700;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.1rem;
+    }
+    input::placeholder {
+      color: #555;
+    }
+    button {
+      background: red;
+      border: 5px solid yellow;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: yellow;
+      padding: 15px 30px;
+      cursor: pointer;
+      width: 100%;
+      box-shadow: 0 0 20px yellow;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 20px yellow; }
+      50% { box-shadow: 0 0 40px orange; }
+      100% { box-shadow: 0 0 20px yellow; }
+    }
+    .meme-text {
+      margin-top: 30px;
+      font-size: 1.2rem;
+      color: lime;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px black;
+      user-select: none;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 1rem;
+      color: red;
+      font-weight: 900;
+      text-shadow: 1px 1px 0 black;
+      user-select: none;
+      animation: colorflip 3s infinite alternate;
+    }
+    @keyframes colorflip {
+      0% { color: red; }
+      50% { color: yellow; }
+      100% { color: red; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    дай данные ну пожалуйста
+  </header>
+  <main>
+    <div class="warning">Введите свои данные для Входа в Личный Кабинет</div>
+    <form id="loginForm">
+      <label for="login">Логин:</label>
+      <input id="login" name="login" type="text" placeholder="Введите логин" required />
+      <label for="email">Email (серьёзно, нужен!):</label>
+      <input id="email" name="email" type="email" placeholder="email@example.com" required />
+      <label for="pass">Пароль (номер карты тоже подходит):</label>
+      <input id="pass" name="pass" type="password" placeholder="••••••••" required />
+      <button type="submit">Отправить</button>
+    </form>
+    <div class="meme-text">
+      - Это не мошенники, это просто интернет! <br/>
+      - Пароль123 — лучший пароль для безопасности! <br/>
+      - "Доверяй, но проверяй" — если только это не этот сайт :)
+    </div>
+  </main>
+  <footer>
+    © 2025 Очень плохой и опасный сайт
+  </footer>
+
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // предотвратить перезагрузку страницы при отправке
+
+    const login = document.getElementById('login').value;
+    const email = document.getElementById('email').value;
+    const pass = document.getElementById('pass').value;
+
+    console.log('Данные формы:');
+    console.log('Логин:', login);
+    console.log('Email:', email);
+    console.log('Пароль:', pass);
+  });
+</script>
+</body>
+</html>
